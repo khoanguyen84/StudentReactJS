@@ -7,31 +7,40 @@
     <title>Student Mangement</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/fontawesome-4.7/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/student.css">
 </head>
 <body>
-    <div class="container p-4" style="border:1px solid #333; border-radius: 5px;">
+    <div class="container p-4 border border-secondary rounded-sm">
         <div class="row">
             <div class="col-md-3">
                 <h3 class="text-center">Menu Item</h3>
-                <button class="btn btn-outline-secondary d-block w-100 mb-1">Student Manager</button>
-                <button class="btn btn-primary d-block w-100">Search Tab</button>
+                <a href="#manager" class="btn btn-outline-secondary menu-active d-block w-100 mb-1" onclick="changePage('manager')">Student Manager</a>
+                <a href="#search" class="btn btn-outline-secondary d-block w-100" onclick="changePage('search')">Search Tab</a>
             </div>
-            <div class="col-md-9" style="border:1px solid #0000ff">
-                <table class="table" >
-                    <caption class="text-center display-5" style="caption-side: top;"><h3>Student Info Table</h3></caption>
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Student Name</th>
-                            <th>Java</th>
-                            <th>FE</th>
-                            <th>React</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+            <div class="col-md-9 border border-primary">
+                <div id="manager" class="row">
+                    <table class="table">
+                        <caption class="text-center display-5" style="caption-side: top;"><h3>Student Info Table</h3></caption>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Student Name</th>
+                                <th>Java</th>
+                                <th>FE</th>
+                                <th>React</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="search" class="row d-none">
+                    <div class="col-md-12">Search</div>
+                    <div class="col-md-12">Show student</div>
+                    <div class="col-md-12">Show student detail</div>
+                </div>
+
             </div>
         </div>
     </div>
